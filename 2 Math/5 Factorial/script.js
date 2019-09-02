@@ -14,8 +14,14 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
-
+        var factorial = document.getElementById('number').value;
+        var result = 0;
+        for (var i= factorial-1; i>0; i--){
+            factorial*=i;
+        }
+        console.log(factorial);
         // your code here
+
 
     });
 
