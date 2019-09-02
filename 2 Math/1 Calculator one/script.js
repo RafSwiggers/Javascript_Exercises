@@ -19,14 +19,14 @@ var optwo = document.getElementById('op-two');
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
-        // perform an substraction
+        console.log(Number(opone.value) - Number(optwo.value));
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
-        // perform an multiplication
+        console.log(Number(opone.value) * Number(optwo.value));
     });
 
     document.getElementById("division").addEventListener("click", function() {
-        // perform an division
+        console.log(Number(opone.value) / Number(optwo.value));
     });
 })();
