@@ -8,6 +8,30 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+var opOne = Number(document.getElementById("op-one").value);
+var opTwo = Number(document.getElementById("op-two").value);
+var buttons = document.getElementsByClassName('operator');
+
+var calculate = function(x, one, two){
+    switch(x){
+        case 0:
+            console.log(one + two);
+            break;
+        case 1:
+                console.log(one - two);
+                break;
+        case 2:
+                console.log(one * two);
+                break;
+        case 3:
+                console.log(one / two);
+    }
+}
+
+for(var i=0; i<buttons.length; i++){
+    buttons[i].addEventListener("click", calculate(i, opOne, opTwo));
+}
+
 
 function test() {
     return true;
