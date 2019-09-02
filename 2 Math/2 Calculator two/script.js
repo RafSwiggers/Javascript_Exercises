@@ -8,11 +8,15 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-var opOne = Number(document.getElementById("op-one").value);
-var opTwo = Number(document.getElementById("op-two").value);
 var buttons = document.getElementsByClassName('operator');
+for(var i=0; i<buttons.length; i++){
+    // @ts-ignore
+    buttons[i].addEventListener("click", calculate(i, opOne, opTwo));
+}
 
-var calculate = function(x, one, two){
+const calculate = function(x, one, two){
+    var opOne = Number(document.getElementById("op-one").value);
+    var opTwo = Number(document.getElementById("op-two").value);
     switch(x){
         case 0:
             console.log(one + two);
@@ -28,9 +32,7 @@ var calculate = function(x, one, two){
     }
 }
 
-for(var i=0; i<buttons.length; i++){
-    buttons[i].addEventListener("click", calculate(i, opOne, opTwo));
-}
+
 
 
 function test() {
