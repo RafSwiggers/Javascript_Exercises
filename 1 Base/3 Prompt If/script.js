@@ -12,7 +12,7 @@
 (function() {
 
     // your code here
-  if ((prompt("Would you like some cake?") == "yes"){
+  if (prompt("Would you like some cake?") == "yes"){
     alert("Congratulations!");
   } else {
     alert("More cake for me!");
