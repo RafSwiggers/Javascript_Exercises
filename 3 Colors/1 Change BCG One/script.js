@@ -12,5 +12,20 @@
 (function() {
 
     // your code here
-
+var redButton = document.getElementById('red');
+var greenButton = document.getElementById('green');
+var yellowButton = document.getElementById('yellow');
+var blueButton = document.getElementById('blue');
+redButton.addEventListener("click", function(){
+    document.body.style.backgroundColor = "red";
+});
+greenButton.addEventListener("click", function(){
+    document.body.style.backgroundColor = "green";
+});
+yellowButton.addEventListener("click", function(){
+    document.body.style.backgroundColor = "yellow";
+});
+blueButton.addEventListener("click", function(){
+    document.body.style.backgroundColor = "blue";
+})
 })();
