@@ -11,12 +11,18 @@
 var buttons = document.getElementsByClassName('operator');
 for(var i=0; i<buttons.length; i++){
     // @ts-ignore
-    buttons[i].addEventListener("click", calculate(i, opOne, opTwo));
+
+    buttons[i].addEventListener("click", function (op) {
+        var opOne = Number(document.getElementById("op-one").value);
+        var opTwo = Number(document.getElementById("op-two").value);
+        calculate(op, opOne, opTwo)
+    }.bind(this, i));
 }
 
+
+
+
 const calculate = function(x, one, two){
-    var opOne = Number(document.getElementById("op-one").value);
-    var opTwo = Number(document.getElementById("op-two").value);
     switch(x){
         case 0:
             console.log(one + two);
