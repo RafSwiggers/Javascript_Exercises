@@ -10,23 +10,26 @@
 // You will have time to focus on it later.
 
 (function() {
-    var target = document.getElementById('target');
+    let target = document.getElementById('target');
     target.innerHTML = "+0";
-    for(let x=0; x<4;x++){
+    for(var a =0; a<4; a++){
         var newSpan = document.createElement('span');
         target.appendChild(newSpan);
+        newSpan.classList.add("result");
+        
     }
-    var spans = document.getElementsByTagName('span');
+    let targetSpans = document.getElementsByClassName('result');
+    const inputField = document.getElementsByTagName('input');
     var button = document.getElementsByTagName('button');
     for(let i =0; i<button.length; i++){
         button[i].addEventListener('click', function(){
-            if(button[i].innerHTML<button[i].getAttribute('data-max')){
-            button[i].innerHTML++;
-            spans[i+1].innerHTML = button[i].innerHTML++; 
-            }
-        })
-    }
+            inputField[i].value = Math.floor((Math.random() * 99) + 0)
+            targetSpans[i].innerHTML = inputField[i].value;
 
-    // your code here
+    })
+}
+
+
+
 
 })();
